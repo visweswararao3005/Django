@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+    font-family: 'Arial', sans-serif;
+    background: lightyellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+        .container {
+    background: pink;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+        table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+        td input[type="number"] ,td input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+        .button {
+    display: inline-block;
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    color: yellow;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 10px  red;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+        th input[type="submit"] {
+    display: inline-block;
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    background: #007BFF;
+    color: yellow;
+    padding: 10px 5px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+
+
+
+</style>
+</head>
+<body>
+<div class="container">
+    <form method="post" action="display">
+        {% csrf_token %}
+        <h1>Year Detection</h1>
+        <table>
+            <tr>
+                <th>Year</th>
+                <td><input type="number" name="year"  placeholder="Enter a year"  value="{{ year }}"required></td>
+            </tr>
+        </table>
+        <table>
+
+            <tr>
+                <th><input type="submit" value="Check"></th>
+                <td><input type="text" value="{{ res }}"></td>
+            </tr>
+            <tr>
+
+                <td><a href="/marriage" class="button">Marriage</a></td>
+                <td><a href="/" class="button">Grade</a></td>
+            </tr>
+        </table>
+        <table>
+        </table>
+    </form>
+</div>
+</body>
+</html>
