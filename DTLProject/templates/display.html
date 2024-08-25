@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{% load mathfilters %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Welcome to the DTL project</h1>
+
+<h2 style="color:lightgreen">Numbers :</h2>
+<h3>x = {{ no1 }} </h3>
+<h3>y = {{ no2 }} </h3>
+
+<h2>Mathematical operations on numbers :</h2>
+<h3>Sum of {{no1}} and {{no2}} is : {{ no1|add:no2}}</h3>
+<h3>Sub of {{no1}} and {{no2}} is : {{ no1|sub:no2}}</h3>
+<h3>Mul of {{no1}} and {{no2}} is : {{ no1|mul:no2}}</h3>
+<h3>Div of {{no1}} and {{no2}} is : {{ no1|div:no2}}</h3>
+<h3>IntDiv of {{no1}} and {{no2}} is : {{ no1|intdiv:no2}}</h3>
+<h3>Mod of {{no1}} and {{no2}} is : {{ no1|mod:no2}}</h3>
+{% with a=-13 %}
+<h3>abs of {{a}} is : {{ a|abs}}</h3>
+{% endwith %}
+
+<h2 style="color:red">List operations :</h2>
+<h3>Original list : {{ numbers }} </h3>
+<h3>Length of List : {{ numbers|length }}</h3>
+<h3>First Element : {{ numbers.0 }}</h3>
+<h3>Last Element : {{ numbers.8 }}</h3>
+<h3>Alternate numbers in even place : {{ numbers|slice:"1::2"}}</h3>
+<h3>Alternate numbers in odd place : {{ numbers|slice:"0::2"}}</h3>
+<h3>List in reverse order : {{ numbers|slice:"::-1" }}</h3>
+
+<h2 style="color:green">Nested List operations :</h2>
+<h3>Original list (names) : {{ nestednames }}</h3>
+<h3>length of List : {{ nestednames|length }}</h3>
+<h3>names - First Record : {{ nestednames.0 }}</h3>
+<h3>names - First Record value : {{ nestednames.0.1 }}</h3>
+
+<h2 style="color:blue">Dictionaries operations :</h2>
+<h3>Dictionary : {{ result }}</h3>
+<h3>student1 Record from Dictionary : {{result.student1}} </h3>
+<h3>student1 python marks from Dictionary : {{result.student1.python}} </h3>
+<h3>student1 django marks from Dictionary : {{result.student1.django}} </h3>
+</body>
+</html>
