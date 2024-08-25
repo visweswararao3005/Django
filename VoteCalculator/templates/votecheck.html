@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vote validation</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0b7;
+    margin: 0;
+    padding: 20px;
+}
+
+.vote-container {
+    max-width: 400px;
+    margin: auto;
+    background-color: #fff;
+    border: 2px solid #000;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+input[type="number"], input[type="text"], input[type="submit"]{
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+.button {
+            display: inline-block;
+            width: 100%;
+            padding: 15px;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            color: yellow;
+            background-color: green;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 0 10px  red;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+input[type="submit"] {
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    opacity: 0.5;
+}
+
+</style>
+</head>
+<body>
+<form method="post" action="display" >
+    {% csrf_token %}
+    <div class="vote-container">
+        <h1>VOTE ELIGIBLE CHECK</h1>
+    <table>
+        <tr>
+            <th>Name</th>
+            <td><input type="text" name="name" placeholder="Name" value="{{ name|default:'' }}"></td>
+        </tr>
+        <tr>
+            <th>Age</th>
+            <td><input type="number" name="age" placeholder="Age" value="{{ age|default:'' }}"></td>
+        </tr>
+    </table>
+        <table>
+        <tr>
+            <th><input type="submit" value="Submit" name="operation"></th>
+            <td><input type="submit" value="Reset" name="operation"></td>
+        </tr>
+        </table>
+        <table>
+        <tr>
+            <th>Result</th>
+            <td><input type="text" placeholder="Result" value="{{ res|default:'' }}" ></td>
+        </tr>
+    </table>
+        <table>
+        <tr>
+            <td><a href='/' class="button">SIMPLE CALCULATER </a></td>
+        </tr>
+
+    </table>
+    </div>
+</form>
+
+</body>
+</html>
