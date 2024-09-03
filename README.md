@@ -22,12 +22,21 @@ PracticeProject2 -  It is a simple Django applicatons on Prime number ! by chang
        http://127.0.0.1:8000/primebelow100         - it gives this output ( Prime numbers below 100 : [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97] )
        http://127.0.0.1:8000/reverseprimebelow100  - it gives this output ( Prime numbers below 100 : [97, 89, 83, 79, 73, 71, 67, 61, 59, 53, 47, 43, 41, 37, 31, 29, 23, 19, 17, 13, 11, 7, 5, 3, 2] )
 
-PracticeProject3 -
-PracticeProject4 -
-PracticeProject5 - 
-VoteCalculator -
-DTLProject - 
-DTLProject2 -
+PracticeProject3 - It is a simple application to demonstarte how urls will change the webpage
+
+PracticeProject4 - In this applications we have two apps 1. Is on armstrong Or Not
+                                                         2. Is on Palindrome Or Not
+                                                         
+PracticeProject5 - In this applications we have three apps 1. Is on Grades of a student
+                                                           2. Is to check whether Leaf Year or Not
+                                                           3. Is to check whether Age is to sutiable for marriage or not
+                                                           
+VoteCalculator -  In this applications we have two apps 1. Is to check vote Eligibility
+                                                        2. Is simple Calculator
+                                                        
+DTLProject - It is a Simple DTL ( Data Template Language ) project all the logic happens in the html page only
+
+DTLProject2 - It is a Simple DTL ( Data Template Language ) project all the logic happens in the html page only
 
 to run these projects 
        1 . We need to open terminal at that folder
