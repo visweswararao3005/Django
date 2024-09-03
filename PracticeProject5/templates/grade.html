@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grade</title>
+    <style>
+
+        body {
+    font-family: 'Arial', sans-serif;
+    background: lightyellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: pink;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+
+td input[type="text"],td input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+td input[type="submit"] {
+    background: #007BFF;
+    color: white;
+    padding: 10px 5px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin: 5px 0;
+}
+
+td input[type="submit"]:hover {
+    background: #0056b3;
+}
+
+.buttons {
+    text-align: center;
+}
+.button {
+            display: inline-block;
+            width: 100%;
+            padding: 15px;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            color: yellow;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 0 10px  red;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+.buttons td {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+    </style>
+</head>
+<body>
+<div class="container">
+<form method="post" action="result">
+    {% csrf_token %}
+    <h1>Student Grade Form</h1>
+    <table>
+        <tr>
+            <th>Name</th>
+            <td><input type="text" name="name" value="{{ name }}" placeholder="Enter name"></td>
+        </tr>
+        <tr>
+            <th>Python</th>
+            <td><input type="number" name="python" value="{{python}}" placeholder="Marks" required></td>
+        </tr>
+        <tr>
+            <th>Java</th>
+            <td><input type="number" name="java" value="{{java}}" placeholder="marks" required></td>
+        </tr>
+        <tr>
+            <th>MySql</th>
+            <td><input type="number" name="mysql" value="{{mysql}}" placeholder="marks" required></td>
+        </tr>
+        <tr>
+            <th>HTML</th>
+            <td><input type="number" name="html" value="{{html}}" placeholder="marks" required></td>
+        </tr>
+        <tr>
+            <th>Django</th>
+            <td><input type="number" name="django" value="{{django}}" placeholder="marks" required></td>
+        </tr>
+    </table>
+    <table>
+        <tr class="buttons">
+            <td colspan="3">
+                <input type="submit" value="Total"      name="check">
+                <input type="submit" value="Percentage" name="check">
+                <input type="submit" value="Grade"      name="check">
+                <input type="submit" value="Status"     name="check">
+            </td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td><input type="text" value="{{ result }}" placeholder="RESULT"></td>
+            <td><input type="submit" value="Clear"     name="check"></td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td><a href="/year" class="button">Year</a></td>
+            <td><a href="/marriage" class="button">Marriage</a></td>
+        </tr>
+    </table>
+</form>
+</div>
+
+</body>
+</html>
