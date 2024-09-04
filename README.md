@@ -38,6 +38,10 @@ DTLProject - It is a Simple DTL ( Data Template Language ) project all the logic
 
 DTLProject2 - It is a Simple DTL ( Data Template Language ) project all the logic happens in the html page only
 
+DTLProject3 - It is a Simple  DTL ( Data Template Language ) project that Explain about the concept of inhertiance in DTL 
+              In this project we use two html pages (navbar.html, footer.html) these two html pages are used in every page of our website
+              by using extends,include keywords we get the features of one html page to another  
+
 to run these projects 
        1 . We need to open terminal at that folder
        2 . Activate virtual environment  (command : virtual_environment_name\Scripts\Activate)
